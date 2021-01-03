@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hw2_9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJv-pj-sti" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="20" y="68" width="335" height="190"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Animation" translatesAutoresizingMaskIntoConstraints="NO" id="wdr-IB-Qf8" customClass="SpringTextView" customModule="Spring">
+                                        <rect key="frame" x="8" y="8" width="319" height="174"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="wdr-IB-Qf8" firstAttribute="top" secondItem="cJv-pj-sti" secondAttribute="top" constant="8" id="AOn-xS-d0Y"/>
+                                    <constraint firstAttribute="width" secondItem="cJv-pj-sti" secondAttribute="height" multiplier="187:106" id="R6R-26-Xef"/>
+                                    <constraint firstAttribute="trailing" secondItem="wdr-IB-Qf8" secondAttribute="trailing" constant="8" id="TY3-QV-61G"/>
+                                    <constraint firstItem="wdr-IB-Qf8" firstAttribute="leading" secondItem="cJv-pj-sti" secondAttribute="leading" constant="8" id="WoY-NV-8AK"/>
+                                    <constraint firstAttribute="bottom" secondItem="wdr-IB-Qf8" secondAttribute="bottom" constant="8" id="fKs-Yz-181"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fap-zx-Be7">
+                                <rect key="frame" x="88" y="448" width="199" height="199"/>
+                                <color key="backgroundColor" red="0.23099026083946228" green="0.65150505304336548" blue="0.97060316801071167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fap-zx-Be7" secondAttribute="height" multiplier="1:1" id="WzV-ZN-Fwf"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FM-s9-5ue"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH1-G7-Wtp" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="126" y="537" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fap-zx-Be7" secondAttribute="bottom" constant="20" id="7DO-vj-pdV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fap-zx-Be7" secondAttribute="trailing" constant="88" id="AG1-U3-WzS"/>
+                            <constraint firstItem="vH1-G7-Wtp" firstAttribute="centerX" secondItem="Fap-zx-Be7" secondAttribute="centerX" id="AjB-8q-lyx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cJv-pj-sti" secondAttribute="trailing" constant="20" id="IsN-U3-EaP"/>
+                            <constraint firstItem="cJv-pj-sti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xwt-u3-Uwa"/>
+                            <constraint firstItem="Fap-zx-Be7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="bed-Uh-GZm"/>
+                            <constraint firstItem="cJv-pj-sti" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="ftg-hf-KSy"/>
+                            <constraint firstItem="vH1-G7-Wtp" firstAttribute="centerY" secondItem="Fap-zx-Be7" secondAttribute="centerY" id="vzn-sa-o7k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animateButton" destination="Fap-zx-Be7" id="iMK-nT-4hJ"/>
+                        <outlet property="animationView" destination="cJv-pj-sti" id="ryR-xD-ddp"/>
+                        <outlet property="buttonLabel" destination="vH1-G7-Wtp" id="zmP-aN-vyR"/>
+                        <outlet property="codeTextView" destination="wdr-IB-Qf8" id="Tnd-m7-2CZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.399999999999999" y="93.103448275862078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
